@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +28,11 @@ img {
 
 body {
     font-family: "Open Sans", sans-serif;
+}
+
+h2,
+p {
+    opacity: 0.9;
 }
 
 .btn {
@@ -76,6 +94,7 @@ body {
     padding: 2rem;
     text-align: center;
     color: hsl(192, 100%, 9%);
+    animation: slide-in-left 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .hero__heading h1 {
@@ -101,6 +120,7 @@ body {
     padding: 1rem;
     text-align: center;
     color: hsl(192, 100%, 9%);
+    animation: slide-in-left 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .illustration,
